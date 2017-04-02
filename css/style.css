@@ -29,7 +29,7 @@ header {
   background: #35424a;
   color: #ffffff;
   padding-top: 30px;
-  min-height: 70px;
+  /*min-height: 70px;*/
   border-bottom: #e8491d 3px solid; 
 }
 
@@ -56,14 +56,19 @@ header #branding {
 
 }
 header #branding a {
-  float:left;
+  /*float:left;*/
   text-decoration: none;
 }
 header #branding h1 {
+  display: inline;
   margin: 0;
 }
 header nav {
  float:right;
+ /*padding-bottom: -20px;*/
+ position: absolute;
+ right:0;
+ top:45px;
 }
 
 header .highlight , header .current a {
@@ -94,21 +99,21 @@ header a:hover {
   font-size: 20px;
 }
 
-#newsletter {
+#b-container {
   padding: 15px;
   color:#ffffff;
   background: #35424a;
 }
-#newsletter h1 {
+#b-container h1 {
   float:left;
 }
 
-#newsletter form{
+#b-container form{
   float:right;
   margin-top:15px; 
 }
 
-#newsletter input[type="email"] {
+#b-container input[type="email"] {
   padding: 4px;
   height: 25px;
   width: 250px;
