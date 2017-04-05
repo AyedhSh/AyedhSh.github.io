@@ -2,9 +2,10 @@
 // API KEY = AIzaSyALp-l1KjrmC39wjPUwapy8mSHqjPKtmok
 
 $(document).ready(function(){
-$('#button2').click(function(){
+// $('#button2').click(function(){
+//   getVideo();
+// });
   getVideo();
-});
 });
 
 function getVideo(){
@@ -34,9 +35,10 @@ $.get('https://www.googleapis.com/youtube/v3/playlistItems',{
     
     function(data){
       $.each(data.items,function(key,value){
-        // console.log(value);
+        console.log(value);
         videoId = value.snippet.resourceId.videoId;
-        $('#result').append(`<li><iframe src="https://www.youtube.com/embed/${videoId}"></iframe></li>`);
+        $('#result').append(`<iframe src="https://www.youtube.com/embed/${videoId}" id="fram"></iframe>` );
+        
       });
     }
     );
