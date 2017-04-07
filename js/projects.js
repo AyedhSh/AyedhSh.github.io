@@ -8,7 +8,6 @@ $(document).ready(function(){
 
     loadFavorateRepo();
     $('.table-fill2').fadeIn('slow');
-    // $('.table-fill').fadeIn('slow');
   });
 
 
@@ -16,19 +15,18 @@ $(document).ready(function(){
 
 function loadGit(){
    $('.table-fill').html(' ');
-  // $('.table-hover').html(' ');
   $.ajax({
     url: 'https://api.github.com/users/AyedhSh/repos?sort=created&per_page=5',
     type: 'GET',
     datatype:  'json',
     success: function(data){
-      $('.table-fill').append('<thead><tr><th class="text-left">Name </th><th class="text-left">Date</th></tr></thead><tbody class="table-hover"></tbody>');
+      $('.table-fill').append(createTable());
       for(let i = 0 ; i < data.length ; i++){
         console.log(data[i]);
         var d= new Date(data[i].created_at);
 
-        // $('#result').append('<div class="add"><a href='+`${data[i].html_url}`+'>'+`${data[i].name}`+'</a>'+formatDate(d)+'</div><br/>');
-        $('.table-hover').append('<tr><td class="text-left2">'+'<a href='+`${data[i].html_url}`+' target="_blank">'+`${data[i].name}`+'</a>'+'</td>'+'<td class="text-left2">'+formatDate(d)+'</td></tr>');
+        
+        $('.table-hover').append(createCells());
 
 
 
@@ -62,4 +60,8 @@ $('.table-fill2').append('<thead><tr><th class="text-left">Name </th></tr></thea
 for(let i = 0; i < repo.length; i++){
 $('.table-fill2 .table-hover2').append('<tr><td class="text-left">'+'<a href='+`${repo[i][0]}`+' target="_blank">'+`${repo[i][1]}`+'</a></td></tr>');
 }
+}
+
+function createTable(){
+  '<thead><tr><th class="text-left">Name </th><th class="text-left">Date</th></tr></thead><tbody class="table-hover"></tbody>'
 }
