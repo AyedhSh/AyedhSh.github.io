@@ -23,10 +23,8 @@ function loadGit(){
       $('.table-fill').append(createTable());
       for(let i = 0 ; i < data.length ; i++){
         console.log(data[i]);
-        var d= new Date(data[i].created_at);
-
-        
-        $('.table-hover').append(createCells());
+        var date = new Date(data[i].created_at);
+        $('.table-hover').append('<tr><td class="text-left2">'+'<a href='+`${data[i].html_url}`+' target="_blank">'+`${data[i].name}`+'</a>'+'</td>'+'<td class="text-left2">'+formatDate(date)+'</td></tr>');
 
 
 
