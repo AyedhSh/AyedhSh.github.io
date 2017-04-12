@@ -13,6 +13,8 @@ $(document).ready(function(){
           'border-style' : '0px solid',
           'background-color' : '#f4f4f4'
         });
+
+        
     });
 
 

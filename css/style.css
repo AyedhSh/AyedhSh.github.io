@@ -6,6 +6,20 @@ body {
   padding: 0;
   margin:0;
 }
+.box img:hover {
+    -webkit-transform: rotate(360deg);
+    -webkit-transition-duration: 1s;
+    -webkit-transition-delay: now;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+.box .rotate:hover {
+    -webkit-transform: rotate(360deg);
+    -webkit-transition-duration: 1s;
+    -webkit-transition-delay: now;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
 .iconColor {
   color: #0091ff;
 }
