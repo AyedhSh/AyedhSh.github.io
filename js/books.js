@@ -3,12 +3,12 @@
 // previewLink   ===> it's the link of book on google to watch
 // volumeInfo.smallThumbnail.thumbnail == small image book
 $('button').click(function(){
-  var whichBookYouWantToSearchFor = "Frankenstein";
+  // var whichBookYouWantToSearchFor = "Frankenstein";
 var whichBookYouWantToSearchFor2 = $('input').val();
 console.log(whichBookYouWantToSearchFor2);
 
 $.ajax({
-  url: "https://www.googleapis.com/books/v1/volumes?q=" + whichBookYouWantToSearchFor + "&key=AIzaSyA4tOZ9uG-5f6G53bt9Z4SyUUbCcJSgfjQ",
+  url: "https://www.googleapis.com/books/v1/volumes?q=" + whichBookYouWantToSearchFor2 + "&key=AIzaSyA4tOZ9uG-5f6G53bt9Z4SyUUbCcJSgfjQ",
   type: "GET",
   // dataType: 'jsonp',
   // headers: {
