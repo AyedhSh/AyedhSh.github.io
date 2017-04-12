@@ -30,8 +30,8 @@ function callVideies(pid){
   function(data){
     $.each(data.items,function(key,value){
       console.log(value);
-      videoId = value.snippet.resourceId.videoId;
-      $('#result').append(addToDom(videoId));
+      var videoId = value.snippet.resourceId.videoId;
+      $('#result').append(`<iframe src="https://www.youtube.com/embed/${videoId}" id="fram"></iframe>`);
 
     });
   }
