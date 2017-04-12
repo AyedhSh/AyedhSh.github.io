@@ -50,7 +50,7 @@ function formatDate(date) {
 
 function loadFavorateRepo(){
   $('.table-fill2').html(' ');
-  var repo = [['https://github.com/AyedhSh/hotels_in_iraq','hotels_in_iraq'],['https://github.com/AyedhSh/js-tweet-shortener-re-coded-000','Js tweet shortener'],['https://github.com/AyedhSh/javascript-lazy-loader-re-coded-000','Java Script lazy loader'],['https://github.com/AyedhSh/devise_pundit_lab-re-coded-000','Devise pundit'],['https://github.com/AyedhSh/cancan_lab-re-coded-000','Cancan_lab'],['https://github.com/AyedhSh/omniauth_readme-re-coded-000','Omniauth_readme']]
+  var repo = [['https://github.com/AyedhSh/hotels_in_iraq','hotels_in_iraq'],['https://github.com/AyedhSh/js-tweet-shortener-re-coded-000','Js tweet shortener'],['https://github.com/AyedhSh/javascript-lazy-loader-re-coded-000','Java Script lazy loader'],['https://github.com/AyedhSh/devise_pundit_lab-re-coded-000','Devise pundit'],['https://github.com/AyedhSh/cancan_lab-re-coded-000','Cancan_lab'],['https://github.com/AyedhSh/omniauth_readme-re-coded-000','Omniauth_readme'],['https://learn.co/tracks/full-stack-web-development/rails/associations-and-rails/flatiron-bnb-methods-lab','Flatiron Bnb Methods Lab']]
   $('.table-fill2').append('<thead><tr><th class="text-left">Name </th></tr></thead><tbody class="table-hover2"></tbody>');
   for(let i = 0; i < repo.length; i++){
     $('.table-fill2 .table-hover2').append('<tr><td class="text-left">'+'<a href='+`${repo[i][0]}`+' target="_blank">'+`${repo[i][1]}`+'</a></td></tr>');
