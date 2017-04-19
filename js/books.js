@@ -4,6 +4,7 @@
 // volumeInfo.smallThumbnail.thumbnail == small image book
 $('button').click(function(){
   // var whichBookYouWantToSearchFor = "Frankenstein";
+  $('#table1').html('');
 var whichBookYouWantToSearchFor2 = $('input').val();
 console.log(whichBookYouWantToSearchFor2);
 
