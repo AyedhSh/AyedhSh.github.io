@@ -20,6 +20,7 @@ $(document).ready(function(){
 
     $.getJSON( "skill.json", function( data ) {
   $.each( data, function( key, val ) {
+    console.log(val);
     $(`#${key}`).append( val);
   });
  
